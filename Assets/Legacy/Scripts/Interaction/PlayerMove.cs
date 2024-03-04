@@ -124,14 +124,14 @@ public class PlayerMove : MonoBehaviour
         }
         
     }
-     void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             OnDamaged(collision.transform.position);
         }
-        
     }
+   
     void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기
     {
         gameObject.layer = 11;

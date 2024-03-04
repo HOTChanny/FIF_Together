@@ -25,21 +25,19 @@ public class HealthController : MonoBehaviour
     {                       //Case of Touch
         if (other.gameObject.tag == "Enemy")
         {
-
             Hurt();
-        }
        
-
-
+        }
     }
     
-    void Hurt()
+    public void Hurt()
     {
         if (rateOfHit < Time.time)
         {
             rateOfHit = Time.time + cooldownHit;
             life[qtdLife - 1].SetActive(false);
             qtdLife -= 1;
+            Debug.Log("´ÙÃÆ´ç!");
         }
 
         if (qtdLife <= 0)
