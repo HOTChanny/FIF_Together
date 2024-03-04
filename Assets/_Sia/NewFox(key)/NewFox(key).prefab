@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e60fe50052605446b2258ad2a5463a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jump: 10
+  Jump: 14
   pos: {fileID: 5459198029664545386}
   checkRadius: 0.35
   islayer:
@@ -222,7 +222,7 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.11037207, y: 0.054623067}
   m_Size: {x: 0.77, y: 1.0496191}

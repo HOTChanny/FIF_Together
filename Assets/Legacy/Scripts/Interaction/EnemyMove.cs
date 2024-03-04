@@ -54,7 +54,7 @@ public class EnemyMove : MonoBehaviour
         Invoke("Think", 3);
     }
 
-    
+    /*
     void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
     {
         if (collision.gameObject.layer == 12)
@@ -62,7 +62,7 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
+    }*/
 
     
 }
