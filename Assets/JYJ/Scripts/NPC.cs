@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private GameObject NPCUI1;
     [SerializeField] private GameObject NPCUI2;
+    [SerializeField] private GameObject NPCUI3;
     [SerializeField] private GameObject Store;
     //public GameObject Text1;
     //public GameObject Text2;
@@ -37,5 +38,10 @@ public class NPC : MonoBehaviour
     public void StroeExitBtn()
     {
         Store.SetActive(false);
+    }
+
+    public void FullHealthBtn()
+    {
+        NPCUI3.SetActive(false);
     }
 }
