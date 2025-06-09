@@ -153,9 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.2
-  Move_1: 0
-  Move_2: 0
+  speed: 1.2
 --- !u!212 &62880735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,8 +199,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.28, y: 7.93}
+  m_DrawMode: 2
+  m_Size: {x: 10.982648, y: 7.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -216,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62880733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.14, y: 0, z: 0}
+  m_LocalPosition: {x: 10.7771, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,9 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.2
-  Move_1: 0
-  Move_2: 0
+  speed: 0.2
 --- !u!212 &75150450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -368,9 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.9
-  Move_1: 0
-  Move_2: 0
+  speed: 0.9
 --- !u!212 &168810327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -501,9 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.5
-  Move_1: 0
-  Move_2: 0
+  speed: 0.5
 --- !u!212 &430569154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -601,9 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.35
-  Move_1: 0
-  Move_2: 0
+  speed: 0.35
 --- !u!212 &436569257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -865,9 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
-  Move_1: 0
-  Move_2: 0
+  speed: 1
 --- !u!212 &518774222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -950,9 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.1
-  Move_1: 0
-  Move_2: 0
+  speed: 1.1
 --- !u!212 &558808832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1065,9 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.7
-  Move_1: 0
-  Move_2: 0
+  speed: 0.7
 --- !u!212 &600869817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1752,9 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.8
-  Move_1: 0
-  Move_2: 0
+  speed: 0.8
 --- !u!1 &1002693565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,9 +1851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.1
-  Move_1: 0
-  Move_2: 0
+  speed: 1.1
 --- !u!212 &1014534011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2089,7 +2069,6 @@ GameObject:
   - component: {fileID: 1052280096}
   - component: {fileID: 1052280095}
   - component: {fileID: 1052280097}
-  - component: {fileID: 1052280098}
   m_Layer: 0
   m_Name: Layer_0000_9
   m_TagString: Untagged
@@ -2142,8 +2121,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.28, y: 7.93}
+  m_DrawMode: 2
+  m_Size: {x: 10.536929, y: 7.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2157,7 +2136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052280094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2176,54 +2155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.2
-  Move_1: 0
-  Move_2: 0
---- !u!61 &1052280098
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052280094}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.764624}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.28, y: 7.93}
-    newSize: {x: 9.28, y: 7.93}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.28, y: 0.40075135}
-  m_EdgeRadius: 0
+  speed: 1.2
 --- !u!1 &1120071497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,9 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.35
-  Move_1: 0
-  Move_2: 0
+  speed: 0.35
 --- !u!212 &1242349203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2482,9 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.8
-  Move_1: 0
-  Move_2: 0
+  speed: 0.8
 --- !u!212 &1257942998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2662,9 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.5
-  Move_1: 0
-  Move_2: 0
+  speed: 0.5
 --- !u!212 &1306335926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2896,9 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.2
-  Move_1: 0
-  Move_2: 0
+  speed: 0.2
 --- !u!212 &1515689721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2996,9 +2920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.9
-  Move_1: 0
-  Move_2: 0
+  speed: 0.9
 --- !u!212 &1542940845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3276,9 +3198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
-  Move_1: 0
-  Move_2: 0
+  speed: 1
 --- !u!212 &1789539831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3376,9 +3296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.7
-  Move_1: 0
-  Move_2: 0
+  speed: 0.7
 --- !u!212 &1805974321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3462,7 +3380,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

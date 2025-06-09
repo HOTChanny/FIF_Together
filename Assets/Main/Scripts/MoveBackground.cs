@@ -1,42 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class MoveBackground : MonoBehaviour {
+public class LoopingBackground : MonoBehaviour
+{
+    public float speed = 2f;  // 배경이 왼쪽으로 움직일 속도
+    private float backgroundWidth;  // 스프라이트 가로 길이
 
+    void Start()
+    {
+        // 현재 배경 이미지의 가로 길이를 구함
+        backgroundWidth = GetComponent<SpriteRenderer>().bounds.size.x;
+    }
 
+    void Update()
+    {
+        // 왼쪽으로 이동 (오른쪽 시작 → 왼쪽 이동)
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-	public float speed;
-	private float x;
-	public float Move_1;
-	public float Move_2;
-
-
-
-
-	// Use this for initialization
-	void Start () {
-		//PontoOriginal = transform.position.x;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-
-		x = transform.position.x;
-		x += speed * Time.deltaTime;
-		transform.position = new Vector3 (x, transform.position.y, transform.position.z);
-
-
-
-		if (x <= Move_1)
+        // 배경이 왼쪽으로 완전히 벗어나면
+        if (transform.position.x <= -backgroundWidth)
         {
-
-			Debug.Log ("hhhh");
-			x = Move_2;
-			transform.position = new Vector3 (x, transform.position.y, transform.position.z);
-		}
-
-
-	}
+            // 배경을 오른쪽으로 재배치 (2개 붙어있다고 가정)
+            float offset = backgroundWidth * 2f;
+            transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
+        }
+    }
 }
