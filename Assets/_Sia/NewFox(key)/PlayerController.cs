@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         IsGround = Physics2D.OverlapCircle(pos.position, checkRadius, islayer);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGround == true)
-        { // 점프&&바닥에 닿았을때만
+        { 
             rigid.velocity = Vector2.up * Jump;
             anim.SetBool("IsJumping", true);
             JumpSound();
@@ -84,10 +84,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float hor = Input.GetAxis("Horizontal"); // 캐릭터 이동
+        float hor = Input.GetAxis("Horizontal");
         rigid.velocity = new Vector2(hor * 4, rigid.velocity.y);
 
-        //hor left > -1 , hor right > 1 방향 변경
+        
         if (hor > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -129,24 +129,14 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 5초간 무적상태
+    void OnDamaged(Vector2 targetPos)
     {
         
         gameObject.layer = 12;
-
-        spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f); // 피격시 플레이어 색 바뀜
-
+        spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f);
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 7, ForceMode2D.Impulse);
-
-        //피격 애니메이션
         anim.SetTrigger("doDamaged");
-
-       /* Hp_ -= 1;
-        if (Hp_ < 0)
-        {
-            Hp_= 0;
-        }*/
 
         Invoke("OffDamaged", 2f);
         Invoke("Super", 5f);
