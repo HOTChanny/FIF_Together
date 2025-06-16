@@ -28,7 +28,7 @@ public class BossHP : MonoBehaviour
     {
         if(coll.gameObject.CompareTag("Bullet"))
         {
-            //ºÒ¸´ ÅÂ±×¿¡ ´ê¾ÒÀ» ¶§ º¸½º´Â? ¾Ö´Ï¸ŞÀÌ¼Ç º¯È¯(OnDamaged¿¡¼­)
+            //ï¿½Ò¸ï¿½ ï¿½Â±×¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½? ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½È¯(OnDamagedï¿½ï¿½ï¿½ï¿½)
             OnDamaged(coll.transform.position);
 
             energy += 5f;
@@ -39,7 +39,7 @@ public class BossHP : MonoBehaviour
             {
                 DieSound();
                 gameObject.transform.Find("Canvas/HPFront").transform.localScale = new Vector3(0.267f, 0.2666667f, 2.4f);
-                //º¸½º Á×´Â°Å »ı°¢
+                //ï¿½ï¿½ï¿½ï¿½ ï¿½×´Â°ï¿½ ï¿½ï¿½ï¿½ï¿½
                 anim.SetTrigger("Die");
                 
                 Invoke("BossDie", 1f);
@@ -48,12 +48,12 @@ public class BossHP : MonoBehaviour
 
         }
     }
-    void OnDamaged(Vector2 targetPos) // º¸½º°¡ ¸Â¾ÒÀ» ¶§
+    void OnDamaged(Vector2 targetPos) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¾ï¿½ï¿½ï¿½ ï¿½ï¿½
     {
-        //ÇÇ°İ ¾Ö´Ï¸ŞÀÌ¼Ç
+        //ï¿½Ç°ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
         anim.SetTrigger("Damaged");
 
-        spriteRenderer.color = new Color(0.8396226f, 0.3287202f, 0.3287202f, 1f); // ÇÇ°İ½Ã »ö ¹Ù²ñ
+        spriteRenderer.color = new Color(0.8396226f, 0.3287202f, 0.3287202f, 1f); // ï¿½Ç°İ½ï¿½ ï¿½ï¿½ ï¿½Ù²ï¿½
 
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 3, ForceMode2D.Impulse);
@@ -63,7 +63,7 @@ public class BossHP : MonoBehaviour
 
     }
 
-    void OffDamaged() // ÇÇ°İ ÈÄ ·¹ÀÌ¾î ¿ø·¡´ë·Î
+    void OffDamaged() // ï¿½Ç°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
       
         spriteRenderer.color = new Color(0.8301887f, 0.7322891f, 0.7322891f, 1f);
@@ -72,8 +72,16 @@ public class BossHP : MonoBehaviour
     void BossDie()
     {
         gameObject.SetActive(false);
-        GameManager.Instance.gameObject.SetActive(false);
-        SceneManager.LoadScene(sceneName);
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.BossClear("BestEndScene"); // GameManagerë¥¼ í†µí•´ ì”¬ ì „í™˜
+        }
+        else
+        {
+            Debug.LogError("BossHP: GameManager ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì°¾ì„ ìˆ˜ ì—†ì–´ ì”¬ ì „í™˜ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
+            // GameManagerê°€ ì—†ìœ¼ë©´ ì§ì ‘ ì”¬ ì „í™˜ (ë¹„ìƒìš©)
+            SceneManager.LoadScene("BestEndScene");
+        }
     }
 
     void DieSound()

@@ -730,9 +730,8 @@ GameObject:
   - component: {fileID: 1586934795}
   - component: {fileID: 1586934794}
   - component: {fileID: 1586934793}
-  - component: {fileID: 1586934792}
-  - component: {fileID: 1586934791}
   - component: {fileID: 1586934796}
+  - component: {fileID: 1586934791}
   m_Layer: 5
   m_Name: RetryBtn
   m_TagString: Untagged
@@ -806,18 +805,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1586934792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586934789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531cbfddf0e182649a94d13fc61daa4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1586934793
 MonoBehaviour:
   m_ObjectHideFlags: 0
