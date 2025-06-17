@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;
 
+
     [SerializeField]
     private float Jump;
     [SerializeField]
