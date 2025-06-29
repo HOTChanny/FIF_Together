@@ -22,19 +22,12 @@ public class FoxController : MonoBehaviour
     public float runSpeed = 6f;
     public float jumpForce = 7f;
 
-    [Header("Jump Sprites")]
-    public Sprite jumpUpSprite;
-    public Sprite jumpDownSprite;
-
-    private Sprite defaultSprite;
-
     private void Awake()
     {
         inputActions = new PlayerInputActions();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultSprite = spriteRenderer.sprite;
     }
 
     private void OnEnable()
@@ -67,22 +60,6 @@ public class FoxController : MonoBehaviour
         animator.SetBool("isRunning", isRunning);
         animator.SetBool("isJumping", isJumping);
         animator.SetFloat("verticalVelocity", rb.velocity.y);
-
-        // 점프 Sprite 처리 (애니메이션 대신 직접 Sprite 사용)
-        if (isJumping)
-        {
-            animator.enabled = false;
-            if (rb.velocity.y >= 0)
-                spriteRenderer.sprite = jumpUpSprite;
-            else
-                spriteRenderer.sprite = jumpDownSprite;
-        }
-        else if (!isAttacking && !animator.enabled)
-        {
-            // 착지 후 Sprite 복원 (애니메이터 다시 활성화)
-            spriteRenderer.sprite = defaultSprite;
-            animator.enabled = true;
-        }
     }
 
     private void FixedUpdate()
@@ -104,13 +81,6 @@ public class FoxController : MonoBehaviour
         if (isAttacking) return;
 
         isAttacking = true;
-
-        // 공격 중엔 무조건 애니메이터 활성화
-        if (!animator.enabled)
-        {
-            animator.enabled = true;
-        }
-
         animator.SetTrigger("isAttacking");
 
         StartCoroutine(ResetAttackAfterTime(0.4f));
