@@ -1597,8 +1597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &134209833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1989,7 +1989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 904834444}
   SoldOut2Sprite: {fileID: 0}
@@ -2641,7 +2640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -3711,7 +3709,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 179
+  m_SurfaceArc: 180
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -4036,8 +4034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &415858261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4446,8 +4444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &429028644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7263,8 +7261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &662614348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11849,7 +11847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 775519038}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -11935,6 +11932,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5386020899740670958, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
       propertyPath: m_Name
       value: sky_grounds
@@ -11942,13 +11943,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 779797053}
   m_SourcePrefab: {fileID: 100100000, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
 --- !u!4 &779797051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1014759576954540374, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
   m_PrefabInstance: {fileID: 779797050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &779797052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+  m_PrefabInstance: {fileID: 779797050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &779797053
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779797052}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &782433918
 GameObject:
   m_ObjectHideFlags: 0
@@ -18303,6 +18331,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5386020899740670958, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
       propertyPath: m_Name
       value: sky_grounds
@@ -18310,13 +18342,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 928160225}
   m_SourcePrefab: {fileID: 100100000, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
 --- !u!4 &928160223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1014759576954540374, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
   m_PrefabInstance: {fileID: 928160222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &928160224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789446902730777091, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
+  m_PrefabInstance: {fileID: 928160222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &928160225
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928160224}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &928219600
 GameObject:
   m_ObjectHideFlags: 0
@@ -18608,8 +18667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: 
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!1 &971878332
 GameObject:
   m_ObjectHideFlags: 0
@@ -19641,8 +19700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &1075192651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28312,7 +28371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 1157435649}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -28893,8 +28951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7828c524e91f6041b1d353037a4f0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Player
-  sceneName: NormalEnd
+  gameOverSceneName: NormalEnd
+  playerTag: Player
 --- !u!61 &1214885727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33205,7 +33263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 1582867473}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -38029,7 +38086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 203122204}
