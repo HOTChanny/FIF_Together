@@ -28,7 +28,6 @@ public class BossHP : MonoBehaviour
     {
         if(coll.gameObject.CompareTag("Bullet"))
         {
-            //�Ҹ� �±׿� ����� �� ������? �ִϸ��̼� ��ȯ(OnDamaged����)
             OnDamaged(coll.transform.position);
 
             energy += 5f;
@@ -39,7 +38,7 @@ public class BossHP : MonoBehaviour
             {
                 DieSound();
                 gameObject.transform.Find("Canvas/HPFront").transform.localScale = new Vector3(0.267f, 0.2666667f, 2.4f);
-                //���� �״°� ����
+
                 anim.SetTrigger("Die");
                 
                 Invoke("BossDie", 1f);
@@ -48,12 +47,12 @@ public class BossHP : MonoBehaviour
 
         }
     }
-    void OnDamaged(Vector2 targetPos) // ������ �¾��� ��
+    void OnDamaged(Vector2 targetPos)
     {
-        //�ǰ� �ִϸ��̼�
+
         anim.SetTrigger("Damaged");
 
-        spriteRenderer.color = new Color(0.8396226f, 0.3287202f, 0.3287202f, 1f); // �ǰݽ� �� �ٲ�
+        spriteRenderer.color = new Color(0.8396226f, 0.3287202f, 0.3287202f, 1f);
 
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 3, ForceMode2D.Impulse);
@@ -63,7 +62,7 @@ public class BossHP : MonoBehaviour
 
     }
 
-    void OffDamaged() // �ǰ� �� ���̾� �������
+    void OffDamaged()
     {
       
         spriteRenderer.color = new Color(0.8301887f, 0.7322891f, 0.7322891f, 1f);
